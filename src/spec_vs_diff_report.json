@@ -1,30 +1,20 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-09T15:17:54.060Z",
-  "summary": "Diff adds a production-safe asset URL helper, updates frontend components to use it for static assets, and introduces a deployment guide and a Node-based smoke-test script. However, it does not provide evidence of an actual Internet Computer mainnet deployment having been performed, nor does it include the required live URL(s) and canister ID(s).",
-  "missing_requirements": [
+  "generatedAt": "2026-02-09T15:22:29.421Z",
+  "summary": "The BuildRequest has no explicit requirements; the diff only modifies project_state.json and does not show any mainnet deployment-related changes. The modified file introduces/records multiple feature entries with REQ-* IDs that were not requested by this BuildRequest.",
+  "missing_requirements": [],
+  "hallucinated_features": [
     {
-      "id": "REQ-19",
-      "requirement": "Deploy the current application version to the Internet Computer mainnet so the site is publicly accessible, and provide the resulting live URL(s) and canister ID(s). After deployment, smoke-test production routes (/ , /learn-more, /special-event) and confirm static assets (including /assets/generated/school-logo.dim_512x512.png) load correctly.",
-      "reason": "The diff only adds documentation/scripts and frontend code adjustments; it does not include evidence of a completed mainnet deployment or the resulting live URL(s) and canister ID(s) as required by REQ-19.",
+      "description": "Added/updated project_state entries describing multiple school-website features (e.g., responsive multi-section site, visual theme rules, data-driven News & Events with detail views, Contact form submitting to backend, SEO/accessibility, generated images, branding updates) with REQ-* references, despite this BuildRequest only asking to deploy the current draft to mainnet and listing no requirements.",
+      "reason": "The BuildRequest contains no feature requirements and focuses on deploying the current draft to Internet Computer mainnet; the diff shows only project_state.json being modified to include/track unrelated feature requirements (REQ-1, REQ-2, REQ-3, REQ-4, REQ-6, REQ-7, REQ-8, etc.).",
       "evidence": [
-        "frontend/DEPLOYMENT.md",
-        "frontend/scripts/smoke-test.mjs",
-        "frontend/src/lib/assetUrl.ts"
+        "project_state.json"
       ]
     }
   ],
-  "hallucinated_features": [],
   "confidence": 0.74,
   "changed_files": [
-    "frontend-file-summaries.txt",
-    "frontend/DEPLOYMENT.md",
-    "frontend/scripts/smoke-test.mjs",
-    "frontend/src/components/layout/Footer.tsx",
-    "frontend/src/components/layout/Header.tsx",
-    "frontend/src/lib/assetUrl.ts",
-    "frontend/src/pages/Home.tsx",
     "project_state.json"
   ]
 }

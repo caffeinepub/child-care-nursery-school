@@ -1,12 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Deploy the existing Child Care Nursery School site to the Internet Computer mainnet and verify the public routes work in production.
+**Goal:** Deploy the current draft of the site to the Internet Computer mainnet (production).
 
 **Planned changes:**
-- Deploy the current frontend assets canister to IC mainnet and provide the live production URL.
-- Deploy the current Motoko backend canister (backend/main.mo) to IC mainnet and provide its canister ID.
-- Smoke-test production routing for Home (/), Learn More (/learn-more), and Special Event (/special-event).
-- Verify static assets (including /assets/generated/school-logo.dim_512x512.png) load correctly in production without 404s.
+- Configure and run a production deployment targeting Internet Computer mainnet (not local replica).
+- Ensure deployment does not modify site content/copy/design or any immutable UI component paths.
+- Keep backend architecture unchanged (single-actor Motoko in `backend/main.mo`), adding `backend/migration.mo` only if a state upgrade requires it.
 
-**User-visible outcome:** The site is publicly accessible on the Internet Computer, and users can navigate to /, /learn-more, and /special-event with pages and assets loading correctly.
+**User-visible outcome:** The existing 3-page site (Home, Learn More, Special Event) is accessible on the live mainnet site with the current draft content and design unchanged.

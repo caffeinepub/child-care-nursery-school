@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
+  "projectStateVersion": 11,
   "summary": "Build a minimal school website for Child Care Nursery School with just a Home page, a Learn More page, and a Special Event page, using the selected school logo and provided staff photos, and including updated academic year and contact details.",
   "architectural_notes": [
     "Homepage/hero 'Learn More' section copy should describe the school as serving pre-nursery through class 5 and emphasize facilities and staff quality.",
@@ -213,6 +213,14 @@
       "id": "AR-13",
       "summary": "Update school contact details: address 320 Ailwal, Azamgarh, Uttar Pradesh; phone +91 9506504091 and +91 7398550589; email childcarenursery2015@gmail.com.",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Deploy the current draft to the live/production site and provide the live URL(s) / canister ID(s).",
+      "reqIds": [
+        "REQ-19"
+      ],
       "status": "pending"
     }
   ],
