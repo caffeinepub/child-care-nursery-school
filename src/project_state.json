@@ -1,0 +1,223 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Build a minimal school website for Child Care Nursery School with just a Home page, a Learn More page, and a Special Event page, using the selected school logo and provided staff photos, and including updated academic year and contact details.",
+  "architectural_notes": [
+    "Homepage/hero 'Learn More' section copy should describe the school as serving pre-nursery through class 5 and emphasize facilities and staff quality.",
+    "School branding/name to use in site content: 'Child Care Nursery School'.",
+    "Site scope reduced to 3 pages only: Home, Learn More, and Special Event (Annual Fete).",
+    "Use provided assets for branding and people photos: selected logo as school logo; Principal Dr Meera Verma uses provided women photo; Manager Mr Ajeet Verma uses provided men photo.",
+    "School contact details to display: 320 Ailwal, Azamgarh, Uttar Pradesh; +91 9506504091; +91 7398550589; childcarenursery2015@gmail.com.",
+    "Special Event details: Annual Fete on 13 November 2026; invitation message for all parents."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-public-school-website-with-a-top-navigation-and-footer-including-the-following-pages-sections-with-english-placeholder-content-that-a-real-school-could-later-customize-home-hero-highlights-about-admissions-academics-student-life-news-events-staff-faculty-and-contact",
+      "title": "Create a responsive public school website with a top navigation and footer, including the following pages/sections with English placeholder content that a real school could later customize: Home (hero + highlights), About, Admissions, Academics, Student Life, News & Events, Staff/Faculty, and Contact.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-and-apply-a-cohesive-visual-theme-for-the-school-site-colors-typography-spacing-components-and-enforce-it-consistently-across-all-pages-buttons-headings-cards-links-forms-do-not-use-a-blue-purple-theme",
+      "title": "Define and apply a cohesive visual theme for the school site (colors, typography, spacing, components) and enforce it consistently across all pages (buttons, headings, cards, links, forms). Do not use a blue/purple theme.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-news-events-experience-that-is-data-driven-show-a-list-page-with-upcoming-events-and-recent-announcements-plus-detail-views-for-individual-items",
+      "title": "Implement a News & Events experience that is data-driven: show a list page with upcoming events and recent announcements, plus detail views for individual items.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-page-with-a-form-name-email-subject-message-that-submits-to-the-backend-and-shows-success-error-feedback-to-the-user",
+      "title": "Add a Contact page with a form (name, email, subject, message) that submits to the backend and shows success/error feedback to the user.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-seo-and-accessibility-set-page-titles-per-route-ensure-headings-are-hierarchical-provide-alt-text-for-images-ensure-sufficient-color-contrast-and-make-navigation-and-forms-keyboard-accessible",
+      "title": "Add basic SEO and accessibility: set page titles per route, ensure headings are hierarchical, provide alt text for images, ensure sufficient color contrast, and make navigation and forms keyboard accessible.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-and-render-the-required-generated-images-as-static-assets-in-frontend-public-assets-generated-and-use-them-in-the-ui-logo-hero-banner-and-a-small-set-of-simple-icons-illustrations",
+      "title": "Add and render the required generated images as static assets in frontend/public/assets/generated and use them in the UI (logo, hero/banner, and a small set of simple icons/illustrations).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-site-wide-school-branding-text-to-use-the-school-name-child-care-nursery-school-wherever-the-current-placeholder-name-greenwood-academy-appears-including-the-header-footer-and-page-titles-document-title-on-the-home-and-about-pages",
+      "title": "Update site-wide school branding text to use the school name \"Child Care Nursery School\" wherever the current placeholder name \"Greenwood Academy\" appears, including the header, footer, and page titles (document.title) on the Home and About pages.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-home-page-hero-content-and-the-about-page-hero-introduction-content-the-content-reached-via-the-home-page-learn-more-button-to-describe-that-child-care-nursery-school-serves-students-from-pre-nursery-through-class-5-and-highlights-strong-facilities-and-caring-qualified-staff-using-clear-polished-english-suitable-for-a-school-website",
+      "title": "Update the Home page hero content and the About page hero/introduction content (the content reached via the Home page \"Learn More\" button) to describe that Child Care Nursery School serves students from pre-nursery through class 5 and highlights strong facilities and caring, qualified staff, using clear, polished English suitable for a school website.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-home-page-hero-image-alt-text-to-reflect-the-new-school-name-child-care-nursery-school-while-remaining-descriptive-and-accessible",
+      "title": "Update the Home page hero image alt text to reflect the new school name (Child Care Nursery School) while remaining descriptive and accessible.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-reduce-the-site-scope-to-only-three-public-routes-pages-home-learn-more-learn-more-and-special-event-special-event-remove-the-other-routes-from-the-router-configuration-so-they-are-not-accessible-and-update-the-header-navigation-to-show-only-these-three-links",
+      "title": "Reduce the site scope to only three public routes/pages: Home (/), Learn More (/learn-more), and Special Event (/special-event). Remove the other routes from the router configuration so they are not accessible, and update the Header navigation to show only these three links.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-home-page-ctas-links-to-match-the-new-minimal-site-replace-the-current-apply-now-and-learn-more-links-with-links-to-learn-more-and-special-event-labels-can-be-learn-more-and-special-event-or-similar",
+      "title": "Update the Home page CTAs/links to match the new minimal site: replace the current 'Apply Now' and 'Learn More' links with links to /learn-more and /special-event (labels can be 'Learn More' and 'Special Event' or similar).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-academic-year-2026-2027-on-the-home-page-in-a-clearly-labeled-section-label-must-include-the-words-academic-year",
+      "title": "Display the academic year \"2026–2027\" on the Home page in a clearly labeled section (label must include the words \"Academic Year\").",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-learn-more-page-at-route-learn-more-using-polished-english-content-describing-child-care-nursery-school-as-serving-pre-nursery-through-class-5-and-highlighting-strong-facilities-and-caring-qualified-staff",
+      "title": "Create the Learn More page at route /learn-more using polished English content describing Child Care Nursery School as serving pre-nursery through class 5 and highlighting strong facilities and caring, qualified staff.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-special-event-page-at-route-special-event-with-an-annual-fete-announcement-for-13-november-2026-inviting-all-parents-to-attend-in-english",
+      "title": "Create the Special Event page at route /special-event with an Annual Fete announcement for 13 November 2026 inviting all parents to attend (in English).",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-leadership-section-can-be-on-the-home-page-or-learn-more-page-showing-principal-dr-meera-verma-with-the-provided-women-photo-and-manager-mr-ajeet-verma-with-the-provided-men-photo-include-accessible-alt-text-that-identifies-the-role-and-name",
+      "title": "Add a leadership section (can be on the Home page or Learn More page) showing: Principal: Dr Meera Verma with the provided women photo, and Manager: Mr Ajeet Verma with the provided men photo. Include accessible alt text that identifies the role and name.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-branding-assets-to-use-the-user-provided-selected-logo-as-the-school-logo-across-the-site-header-and-footer",
+      "title": "Update branding assets to use the user-provided selected logo as the school logo across the site (Header and Footer).",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-displayed-school-contact-details-across-the-minimal-site-at-least-in-the-footer-to-address-320-ailwal-azamgarh-uttar-pradesh-phone-91-9506504091-and-91-7398550589-email-childcarenursery2015-gmail-com",
+      "title": "Update displayed school contact details across the minimal site (at least in the Footer) to: Address: 320 Ailwal, Azamgarh, Uttar Pradesh; Phone: +91 9506504091 and +91 7398550589; Email: childcarenursery2015@gmail.com.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-deploy-the-current-application-version-to-the-internet-computer-mainnet-so-the-site-is-publicly-accessible-and-provide-the-resulting-live-url-s-and-canister-id-s-after-deployment-smoke-test-the-production-site-to-confirm-the-three-public-routes-render-correctly-home-learn-more-learn-more-and-special-event-special-event",
+      "title": "Deploy the current application version to the Internet Computer mainnet so the site is publicly accessible, and provide the resulting live URL(s) and canister ID(s). After deployment, smoke-test the production site to confirm the three public routes render correctly: Home (/), Learn More (/learn-more), and Special Event (/special-event).",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a school website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Backend: implement persistence for (a) announcements, (b) events, and (c) contact inquiries in the single Motoko actor, with query methods for public reading and update methods for creating items (initially callable without admin/auth).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Update homepage 'Learn More' content and branding to reflect the school name 'Child Care Nursery School' and that it serves pre-nursery through class 5, highlighting facilities and staff.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Reduce scope to a minimal site with only 3 pages: Home, Learn More, and Special Event (Annual Fete).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Home page: display academic year 2026–2027 as the academic year.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Branding/assets: use the user-selected logo as the school logo across the site.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Special Event page: add Annual Fete announcement for 13 November 2026 inviting all parents to attend.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Add leadership section with Principal Dr Meera Verma (use provided women photo) and Manager Mr Ajeet Verma (use provided men photo).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Update school contact details: address 320 Ailwal, Azamgarh, Uttar Pradesh; phone +91 9506504091 and +91 7398550589; email childcarenursery2015@gmail.com.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Child Care Nursery School",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

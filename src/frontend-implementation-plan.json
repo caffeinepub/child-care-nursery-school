@@ -1,0 +1,55 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Child Care Nursery School — Frontend mainnet deployment readiness + smoke test",
+  "requirements": [
+    {
+      "id": "REQ-19",
+      "summary": "Prepare frontend for Internet Computer mainnet deployment and add a repeatable post-deploy smoke test to confirm the three public routes and generated static assets load in production.",
+      "acceptanceCriteria": [
+        "A successful mainnet deployment is completed for both frontend assets and the Motoko backend canister.",
+        "The live production URL is provided and loads without errors.",
+        "The canister IDs for deployed canisters (frontend asset canister and backend canister) are provided.",
+        "In production, navigating to /, /learn-more, and /special-event works and shows the expected page content and layout.",
+        "Static assets (including /assets/generated/school-logo.dim_512x512.png) load correctly in production (no 404s)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/DEPLOYMENT.md",
+          "operation": "create",
+          "description": "Add a production deployment runbook for the frontend covering: required build outputs, how to deploy with the repo’s Internet Computer tooling, where to capture/record the live URL(s) and canister ID(s), and a checklist to validate /, /learn-more, and /special-event after deploy. Use the github-export-icp-cli component as the reference for deployment scripts/config conventions; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/scripts/smoke-test.mjs",
+          "operation": "create",
+          "description": "Create a minimal Node-based smoke test script that takes the deployed base URL as input and verifies HTTP 200 (and basic expected text) for /, /learn-more, /special-event, and verifies the generated asset /assets/generated/school-logo.dim_512x512.png returns 200. Keep it runnable as a standalone script (no dependency on frontend/src)."
+        },
+        {
+          "path": "frontend/src/lib/assetUrl.ts",
+          "operation": "create",
+          "description": "Add a small helper to build asset URLs using import.meta.env.BASE_URL so static assets resolve correctly under production hosting (including IC asset canister base paths)."
+        },
+        {
+          "path": "frontend/src/components/layout/Header.tsx",
+          "operation": "modify",
+          "description": "Update logo <img> src usage to use the new asset URL helper so /assets/generated/school-logo.dim_512x512.png resolves reliably in production builds. Do not modify any files under frontend/src/components/ui (read-only)."
+        },
+        {
+          "path": "frontend/src/components/layout/Footer.tsx",
+          "operation": "modify",
+          "description": "Update footer logo <img> src usage to use the new asset URL helper so /assets/generated/school-logo.dim_512x512.png resolves reliably in production builds. Do not modify any files under frontend/src/components/ui (read-only)."
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Update all generated image src references to use the new asset URL helper (including frontend/public/assets/generated/school-hero.dim_1600x600.png, principal-dr-meera-verma.dim_800x800.jpg, manager-mr-ajeet-verma.dim_800x800.jpg) to prevent production path issues."
+        },
+        {
+          "path": "frontend/public/assets/generated/README.md",
+          "operation": "create",
+          "description": "Document the required generated static assets that must exist in this folder for production (including frontend/public/assets/generated/school-logo.dim_512x512.png) and include a quick checklist to verify no 404s after deployment."
+        }
+      ]
+    }
+  ]
+}

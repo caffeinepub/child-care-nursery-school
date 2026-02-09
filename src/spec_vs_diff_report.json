@@ -1,0 +1,30 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-09T15:17:54.060Z",
+  "summary": "Diff adds a production-safe asset URL helper, updates frontend components to use it for static assets, and introduces a deployment guide and a Node-based smoke-test script. However, it does not provide evidence of an actual Internet Computer mainnet deployment having been performed, nor does it include the required live URL(s) and canister ID(s).",
+  "missing_requirements": [
+    {
+      "id": "REQ-19",
+      "requirement": "Deploy the current application version to the Internet Computer mainnet so the site is publicly accessible, and provide the resulting live URL(s) and canister ID(s). After deployment, smoke-test production routes (/ , /learn-more, /special-event) and confirm static assets (including /assets/generated/school-logo.dim_512x512.png) load correctly.",
+      "reason": "The diff only adds documentation/scripts and frontend code adjustments; it does not include evidence of a completed mainnet deployment or the resulting live URL(s) and canister ID(s) as required by REQ-19.",
+      "evidence": [
+        "frontend/DEPLOYMENT.md",
+        "frontend/scripts/smoke-test.mjs",
+        "frontend/src/lib/assetUrl.ts"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.74,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/DEPLOYMENT.md",
+    "frontend/scripts/smoke-test.mjs",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/components/layout/Header.tsx",
+    "frontend/src/lib/assetUrl.ts",
+    "frontend/src/pages/Home.tsx",
+    "project_state.json"
+  ]
+}

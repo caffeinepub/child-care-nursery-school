@@ -1,0 +1,28 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-deploy-the-current-application-version-to-the-internet-computer-mainnet-so-the-site-is-publicly-accessible-and-provide-the-resulting-live-url-s-and-canister-id-s-after-deployment-smoke-test-the-production-site-to-confirm-the-three-public-routes-render-correctly-home-learn-more-learn-more-and-special-event-special-event",
+      "featureTitle": "Deploy the current application version to the Internet Computer mainnet so the site is publicly accessible, and provide the resulting live URL(s) and canister ID(s). After deployment, smoke-test the production site to confirm the three public routes render correctly: Home (/), Learn More (/learn-more), and Special Event (/special-event).",
+      "files": [
+        "frontend/DEPLOYMENT.md",
+        "frontend/scripts/smoke-test.mjs",
+        "frontend/src/components/layout/Footer.tsx",
+        "frontend/src/components/layout/Header.tsx",
+        "frontend/src/lib/assetUrl.ts",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

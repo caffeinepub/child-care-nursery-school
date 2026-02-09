@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Deploy the Child Care Nursery School site to production (Internet Computer)",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-19",
+      "text": "Deploy the current application version to the Internet Computer mainnet so the site is publicly accessible, and provide the resulting live URL(s) and canister ID(s). After deployment, smoke-test the production site to confirm the three public routes render correctly: Home (/), Learn More (/learn-more), and Special Event (/special-event).",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Now put it live"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A successful mainnet deployment is completed for both frontend assets and the Motoko backend canister.",
+        "The live production URL is provided and loads without errors.",
+        "The canister IDs for deployed canisters (frontend asset canister and backend canister) are provided.",
+        "In production, navigating to /, /learn-more, and /special-event works and shows the expected page content and layout.",
+        "Static assets (including /assets/generated/school-logo.dim_512x512.png) load correctly in production (no 404s)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui (read-only).",
+    "Keep all backend logic in the single Motoko actor (backend/main.mo); do not introduce additional backend services."
+  ],
+  "nonGoals": [
+    "Adding new pages or restoring removed routes beyond Home, Learn More, and Special Event.",
+    "Introducing new backend features, authentication changes, or schema migrations unrelated to deployment."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
